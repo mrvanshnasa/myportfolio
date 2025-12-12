@@ -1,0 +1,211 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vansh — UI/UX Designer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio — Vansh. Replace placeholders (links/images) if needed.">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header container" role="banner">
+    <div class="header-left">
+      <div class="logo">
+        <div class="logo-box" aria-hidden="true"></div>
+        <div class="brand-text">
+          <div class="brand-name">Vansh</div>
+          <!-- BTech CSE '28 -->
+          <div class="brand-sub">UI / UX Designer • BTech CSE '28</div>
+        </div>
+      </div>
+    </div>
+
+    <nav class="header-nav" role="navigation" aria-label="Main navigation">
+      <button id="navToggle" class="nav-toggle" aria-controls="navList" aria-expanded="false" aria-label="Toggle menu">☰</button>
+      <ul id="navList" class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <!-- Replace RESUME_LINK with your resume url if you have it.
+             Resume pill made more visible per your request -->
+        <li><a class="resume-pill" id="resumeTop" href="RESUME_LINK" target="_blank" rel="noopener noreferrer">Resume</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="container main-layout" role="main">
+    <!-- LEFT column -->
+    <section class="left-col" id="about" aria-labelledby="hero-title">
+      <div class="work-label">Selected work • UI / UX • Figma</div>
+
+      <h1 id="hero-title" class="hero-title">
+        Hi, I'm <span class="name-gradient">Vansh</span>
+      </h1>
+
+      <!-- Updated biography text as requested -->
+      <p class="hero-desc">UI/UX designer, I transform sketches into clear wireframes, prototypes and polished UI — with an emphasis on usability and aesthetics.</p>
+
+      <div class="cta-row">
+        <a class="cta-primary" href="#projects">See Work</a>
+
+        <!-- "Hire me" acts as copy-email — data-email set to your provided email -->
+        <button id="copyEmail" class="cta-ghost" data-email="vanshnasaoffice@gmail.com">Hire me</button>
+
+        <div class="social-inline">
+          <!-- replace links with your real profiles -->
+          <a href="https://linkedin.com/in/PLACEHOLDER" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://github.com/PLACEHOLDER" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://behance.net/PLACEHOLDER" target="_blank" rel="noopener noreferrer">Behance</a>
+        </div>
+      </div>
+
+      <!-- large portrait card preview — use the portrait image named 'portrait.jpg' (replace file if needed) -->
+      <div class="profile-card large-card">
+        <!-- Put your portrait file in the same folder and name it "portrait.jpg" -->
+        <img src="portrait.jpg" alt="Portrait of Vansh" class="profile-img">
+        <div class="profile-meta">
+          <div class="meta-name">Vansh</div>
+          <div class="meta-sub">Delhi, India • vanshnasaoffice@gmail.com</div>
+          <div class="meta-tags">
+            <span class="tag">Open to internships</span>
+            <span class="tag">Figma • Prototyping</span>
+            <span class="tag">+91 9220952526</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects grid -->
+      <section id="projects" class="projects-section" aria-labelledby="projects-heading">
+        <h2 id="projects-heading">Selected Projects</h2>
+        <p class="projects-intro">Tap any project to view case study or Behance link.</p>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="proj-card">
+            <div class="proj-media">
+              <img src="proj1-thumb.jpg" alt="Project 1 thumbnail">
+            </div>
+            <div class="proj-body">
+              <h3><a href="PROJECT_LINK_1" target="_blank" rel="noopener noreferrer">BrewUp — Coffee App (iOS)</a></h3>
+              <p class="proj-desc">Mobile-first coffee ordering app — minimal flows & quick ordering UX. <a href="PROJECT_LINK_1" target="_blank" rel="noopener noreferrer">View Project Here</a></p>
+              <div class="proj-meta">
+                <span class="badge">UI</span>
+                <span class="badge">iOS</span>
+                <span class="year">2024</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="proj-card">
+            <div class="proj-media">
+              <img src="proj2-thumb.jpg" alt="Project 2 thumbnail">
+            </div>
+            <div class="proj-body">
+              <h3><a href="PROJECT_LINK_2" target="_blank" rel="noopener noreferrer">Verde — Seamless Plant Shopping App</a></h3>
+              <p class="proj-desc">Designed to make buying plants easy, transparent, and delightful. <a href="PROJECT_LINK_2" target="_blank" rel="noopener noreferrer">Behance →</a></p>
+              <div class="proj-meta">
+                <span class="badge">UX</span>
+                <span class="badge">Accessibility</span>
+                <span class="year">2025</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="proj-card">
+            <div class="proj-media">
+              <img src="proj3-thumb.jpg" alt="Project 3 thumbnail">
+            </div>
+            <div class="proj-body">
+              <h3><a href="PROJECT_LINK_3" target="_blank" rel="noopener noreferrer">Instagram Login Redesign</a></h3>
+              <p class="proj-desc">Improved visual clarity & accessibility on login screen. <a href="PROJECT_LINK_3" target="_blank" rel="noopener noreferrer">Behance →</a></p>
+              <div class="proj-meta">
+                <span class="badge">UX</span>
+                <span class="badge">Accessibility</span>
+                <span class="year">2024</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Case studies (compact list) -->
+      <section class="case-studies" aria-labelledby="case-heading">
+        <h2 id="case-heading">Case Studies</h2>
+
+        <div class="case-list">
+          <article class="case-card">
+            <h3><a href="PROJECT_LINK_1" target="_blank" rel="noopener noreferrer">BrewUp — Coffee App (iOS)</a></h3>
+            <p class="muted-link"><a href="PROJECT_LINK_1" target="_blank" rel="noopener noreferrer">View Case Study Here</a></p>
+            <div class="case-media"><img src="proj1-thumb-wide.jpg" alt="BrewUp case image"></div>
+          </article>
+
+          <article class="case-card">
+            <h3><a href="PROJECT_LINK_2" target="_blank" rel="noopener noreferrer">Verde — Seamless Plant Shopping App</a></h3>
+            <p class="muted-link"><a href="PROJECT_LINK_2" target="_blank" rel="noopener noreferrer">View Case Study Here</a></p>
+            <div class="case-media"><img src="proj2-thumb-wide.jpg" alt="Verde case image"></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <!-- RIGHT column / aside -->
+    <aside class="right-col" aria-labelledby="contact-heading">
+      <div class="aside-inner">
+        <div class="mini-profile">
+          <img src="portrait.jpg" alt="Portrait of Vansh" class="aside-portrait">
+          <div class="aside-meta">
+            <div class="aside-name">Vansh</div>
+            <div class="aside-sub">Delhi, India • vanshnasaoffice@gmail.com</div>
+          </div>
+        </div>
+
+        <div class="contact-card" id="contact">
+          <h3 id="contact-heading">Contact</h3>
+          <p>Based in Delhi — open to internships, freelance & collaboration.</p>
+          <p><strong>Email</strong><br><a href="mailto:vanshnasaoffice@gmail.com">vanshnasaoffice@gmail.com</a></p>
+          <p><strong>Phone</strong><br><a href="tel:+919220952526">+91 9220952526</a></p>
+          <p><strong>LinkedIn</strong><br><a href="https://linkedin.com/in/PLACEHOLDER" target="_blank" rel="noopener noreferrer">YOUR LINKEDIN</a></p>
+        </div>
+
+        <div class="skills-card">
+          <h4>Skills & Tools</h4>
+          <ul>
+            <!-- Updated design line: removed Illustrator, now lists Figma, wireframing and prototyping -->
+            <li><strong>Design:</strong> Figma, wireframing and prototyping</li>
+            <li><strong>Frontend:</strong> html, css, js</li>
+            <li><strong>Languages:</strong> python, c</li>
+            <li><strong>Research:</strong> User research, usability testing</li>
+          </ul>
+        </div>
+
+        <section id="experience" class="experience-card">
+          <h3>Experience</h3>
+
+          <ul class="timeline">
+            <li><span class="t-date">Jul 2025 – Present</span><span class="t-box">Lloyds Banking Group — UX Design (Job Simulation)</span></li>
+            <li><span class="t-date">Jun 2025 – Aug 2025</span><span class="t-box">Deloitte — Data Analyst (Simulation)</span></li>
+            <li><span class="t-date">Jan 2025 – Mar 2025</span><span class="t-box">CultSoft — UI Designer (Intern)</span></li>
+            <li><span class="t-date">Jul 2024 – Nov 2024</span><span class="t-box">Growintern — UI/UX Design Intern</span></li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer container" role="contentinfo">
+    <p>© <span id="year"></span> Vansh — Built with HTML/CSS/JS. Replace placeholders before committing.</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
