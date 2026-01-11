@@ -1,186 +1,139 @@
-/* style.css */
-/* Dark UI portfolio — updated for Vansh
-   Notes:
-   - Put portrait.jpg and project thumbnails in same folder
-   - Edit colors in :root variables if you want different accents
-*/
-
-:root{
-  --bg:#071029;
-  --card:#0f1724;
-  --muted:#9aa3b2;
-  --text:#e6eef7;
-  --accent-a:#7b61ff;
-  --accent-b:#17c7c3;
-  --glass:rgba(255,255,255,0.03);
-  --radius:14px;
-  --container:1100px;
-  --font: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+:root {
+  --bg: #0b0f19;
+  --card: #12182a;
+  --primary: #6c8cff;
+  --text: #e6e9f0;
+  --muted: #9aa4c7;
 }
 
-/* Reset */
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:var(--font);
-  background:var(--bg);
-  color:var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
-/* Decorative glows */
-body::before, body::after{
-  content:"";
-  position:fixed;
-  pointer-events:none;
-  z-index:0;
-}
-body::before{
-  left:-8%;
-  top:18%;
-  width:380px;
-  height:380px;
-  background: radial-gradient(circle at 30% 30%, rgba(120,110,255,0.28), rgba(8,28,50,0) 40%),
-              radial-gradient(circle at 70% 70%, rgba(12,160,190,0.18), rgba(8,28,50,0) 40%);
-  filter:blur(42px);
-  border-radius:50%;
-}
-body::after{
-  right:-8%;
-  bottom:10%;
-  width:360px;
-  height:360px;
-  background: radial-gradient(circle at 40% 40%, rgba(22,155,180,0.12), rgba(128,88,160,0.14));
-  filter:blur(36px);
-  border-radius:50%;
+body {
+  background: var(--bg);
+  color: var(--text);
 }
 
-/* Container */
-.container{width:92%; max-width:var(--container); margin:0 auto; position:relative; z-index:2}
-
-/* Skip link */
-.skip-link{position:absolute; left:8px; top:6px; transform:translateY(-120%); background:#111; color:white; padding:8px 10px; border-radius:6px}
-.skip-link:focus{transform:none}
-
-/* Header */
-.site-header{display:flex; align-items:center; justify-content:space-between; padding:26px 0; gap:20px}
-.logo{display:flex; align-items:center; gap:12px}
-.logo-box{width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg,var(--accent-a),var(--accent-b)); box-shadow:0 8px 28px rgba(11,14,22,0.6)}
-.brand-text{line-height:1}
-.brand-name{font-weight:800; font-size:1.05rem}
-.brand-sub{font-size:0.85rem; color:var(--muted)}
-
-/* Nav */
-.header-nav{display:flex; align-items:center; gap:16px}
-.nav-list{display:flex; gap:26px; list-style:none; margin:0; padding:0; align-items:center}
-.nav-list a{color:#ffffff var(--muted); text-decoration:none; font-weight:600}
-.nav-list a:hover{color:var(--text); text-decoration:underline}
-
-/* Make resume pill more visible (bigger + glow) */
-.resume-pill{
-  padding:12px 18px;
-  border-radius:14px;
-  background:linear-gradient(90deg,var(--accent-a),var(--accent-b));
-  color:#071029;
-  font-weight:800;
-  text-decoration:none;
-  box-shadow: 0 12px 30px rgba(124,96,255,0.18);
-  transform:translateY(-1px);
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 16px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(11, 15, 25, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 100;
 }
 
-/* mobile nav toggle */
-.nav-toggle{display:none; background:transparent; color:var(--text); border:0; font-size:1.1rem; cursor:pointer}
-
-/* Main layout */
-.main-layout{display:grid; grid-template-columns: 1fr 340px; gap:40px; align-items:start; padding:36px 0}
-
-/* LEFT column */
-.left-col{padding-right:6px}
-.work-label{color:var(--muted); margin-bottom:12px}
-.hero-title{font-size:clamp(48px, 7vw, 72px); margin:0; line-height:0.95; font-weight:800}
-.name-gradient{
-  background: linear-gradient(90deg,var(--accent-a),var(--accent-b));
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.hero-desc{color:var(--muted); max-width:760px; margin-top:18px; font-size:1.05rem}
-
-/* CTAs */
-.cta-row{display:flex; align-items:center; gap:14px; margin-top:22px}
-.cta-primary{
-  padding:12px 16px; border-radius:12px; background:linear-gradient(90deg,var(--accent-a),var(--accent-b));
-  color:#071029; font-weight:700; text-decoration:none;
-}
-.cta-ghost{background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text); padding:10px 14px; border-radius:10px; cursor:pointer}
-.social-inline{margin-left:14px; display:flex; gap:10px}
-.social-inline a{color:var(--muted); font-weight:600; text-decoration:none}
-
-/* profile card */
-.profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015)); border-radius:18px; padding:14px; margin-top:24px; box-shadow: 0 8px 28px rgba(3,6,12,0.6); display:flex; gap:16px; align-items:flex-start; border:1px solid rgba(255,255,255,0.02)}
-.large-card .profile-img{width:420px; height:auto; max-width:100%; border-radius:10px; object-fit:cover; display:block; border:1px solid rgba(255,255,255,0.03)}
-.profile-meta{padding:8px 6px}
-.meta-name{font-weight:800; font-size:1.05rem}
-.meta-sub{color:var(--muted); margin-top:6px; font-size:0.95rem}
-.meta-tags{margin-top:10px; display:flex; gap:8px; flex-wrap:wrap}
-.tag{background:rgba(255,255,255,0.03); padding:8px 10px; border-radius:999px; font-weight:600; color:var(--muted)}
-
-/* Projects */
-.projects-section{margin-top:36px}
-.projects-intro{color:var(--muted)}
-.projects-grid{display:grid; grid-template-columns: repeat(3, 1fr); gap:22px; margin-top:18px}
-.proj-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015)); border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.02); box-shadow:0 10px 28px rgba(2,6,12,0.6); display:flex; flex-direction:column}
-.proj-media img{width:100%; height:160px; object-fit:cover; display:block}
-.proj-body{padding:14px}
-.proj-body h3{margin:0 0 8px 0; font-size:1.05rem}
-.proj-body p{color:var(--muted); margin:0 0 10px 0}
-.proj-meta{display:flex; gap:8px; align-items:center}
-.badge{background:rgba(255,255,255,0.03); padding:6px 10px; border-radius:999px; color:var(--muted); font-weight:700; font-size:0.85rem}
-.year{margin-left:auto; color:var(--muted)}
-
-/* Case studies */
-.case-studies{margin-top:32px}
-.case-list{display:flex; flex-direction:column; gap:16px; margin-top:12px}
-.case-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015)); border-radius:14px; padding:14px; border:1px solid rgba(255,255,255,0.02)}
-.case-media img{width:100%; height:200px; object-fit:cover; border-radius:10px; margin-top:10px}
-
-/* RIGHT column */
-.right-col{position:relative}
-.aside-inner{position:sticky; top:28px; display:flex; flex-direction:column; gap:16px}
-.mini-profile{display:flex; gap:12px; align-items:center}
-.aside-portrait{width:88px; height:88px; border-radius:12px; object-fit:cover; border:1px solid rgba(255,255,255,0.04)}
-.aside-name{font-weight:800}
-.aside-sub{color:var(--muted); font-size:0.95rem}
-
-/* contact/skills/experience cards */
-.contact-card, .skills-card, .experience-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015)); border-radius:12px; padding:14px; border:1px solid rgba(255,255,255,0.02)}
-.skills-card ul{margin:8px 0 0 0; padding-left:18px; color:var(--muted)}
-.experience-card .timeline{list-style:none; margin:12px 0 0 0; padding:0; display:flex; flex-direction:column; gap:12px}
-.timeline li{display:flex; gap:18px; align-items:flex-start}
-.t-date{color:var(--muted); min-width:120px}
-.t-box{background:rgba(255,255,255,0.02); padding:10px 12px; border-radius:10px; font-weight:700}
-
-/* Footer */
-.site-footer{padding:36px 0; color:var(--muted); border-top:1px solid rgba(255,255,255,0.02); margin-top:26px}
-
-/* responsive */
-@media (max-width:1100px){
-  .projects-grid{grid-template-columns:repeat(2,1fr)}
-  .main-layout{grid-template-columns:1fr 300px}
-}
-@media (max-width:860px){
-  .nav-list{display:none}
-  .nav-toggle{display:block}
-  .main-layout{grid-template-columns:1fr; gap:28px}
-  .aside-inner{position:relative; top:auto}
-  .projects-grid{grid-template-columns:1fr}
-  .profile-card.large-card .profile-img{width:100%}
-}
-@media (max-width:420px){
-  .hero-title{font-size:40px}
-  .proj-media img{height:140px}
+nav h1 {
+  color: var(--primary);
 }
 
-/* subtle hover animations */
-.proj-card, .case-card, .profile-card, .contact-card{transition:transform .22s ease, box-shadow .22s ease}
-.proj-card:hover, .case-card:hover{transform:translateY(-8px); box-shadow:0 26px 48px rgba(3,6,12,0.6)}
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 16px;
+  color: var(--muted);
+}
+
+.hero button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+section {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* CARDS */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--card);
+  padding: 24px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* VIDEO */
+.video-box {
+  background: #0e1324;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 16px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  color: var(--muted);
+}
+
+/* ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .hero h2 {
+    font-size: 34px;
+  }
+}
